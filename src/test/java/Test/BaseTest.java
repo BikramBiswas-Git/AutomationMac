@@ -12,11 +12,14 @@ import Test.BaseComponents.BaseComponentsDemo;
 import Pages.SignUpPage;
 import Pages.SignUpPage;
 
+
+
 public class BaseTest extends BaseComponentsDemo
 
 {
 	public BaseTest() {
 		// Default constructor
+		System.out.println("dsjdh");
 	}
 
 	WebDriver driver = InitializeDriver();
