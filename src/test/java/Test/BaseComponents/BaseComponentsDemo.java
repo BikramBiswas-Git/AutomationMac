@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -82,5 +83,36 @@ public class BaseComponentsDemo {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
+    public void waitFunctionAlert() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.alertIsPresent());
+
+	}
+    
+    public void waitFunctionClickable(WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+
+	}
+    public void waitFunctionPresence(By element) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.presenceOfElementLocated(element));
+
+	}
+    
+    
+    public String UserData(String propertyName) {
+		Properties properties = new Properties();
+		try {
+			FileInputStream fileInputStream = new FileInputStream(
+					"/Users/codeclouds-bikram/Desktop/AutomationMac/src/test/java/Test/resources/Globaldata.properties");
+			properties.load(fileInputStream);
+			fileInputStream.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return properties.getProperty(propertyName);
+
+	}
 
 }

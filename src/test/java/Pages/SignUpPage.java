@@ -2,6 +2,8 @@ package Pages;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,19 +12,7 @@ import Test.BaseComponents.BaseComponentsDemo;
 
 public class SignUpPage extends BaseComponentsDemo {
 	public static WebDriver driver;
-	public String UserData(String propertyName) {
-		Properties properties = new Properties();
-		try {
-			FileInputStream fileInputStream = new FileInputStream(
-					"/Users/codeclouds-bikram/Desktop/AutomationMac/src/test/java/Test/resources/Globaldata.properties");
-			properties.load(fileInputStream);
-			fileInputStream.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return properties.getProperty(propertyName);
-
-	}
+	
 
 	public SignUpPage(WebDriver driver) {
 
@@ -30,7 +20,7 @@ public class SignUpPage extends BaseComponentsDemo {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void SigningUp() {
+	public String SigningUp() {
 		driver.get("https://www.demoblaze.com/index.html");
 		// WebElemets related to this page
 		WebElement signUpButton = driver.findElement(By.cssSelector("#signin2"));
@@ -45,6 +35,13 @@ public class SignUpPage extends BaseComponentsDemo {
 		userNameField.sendKeys(userName);
 		passwordField.sendKeys(password);
 		signUpButon.click();
+		waitFunctionAlert();
+		Alert alert = driver.switchTo().alert();
+		String alertText = alert.getText();
+		System.out.println(alertText);
+		driver.switchTo().alert().accept();
+		return alertText;
+		
 
 	}
 

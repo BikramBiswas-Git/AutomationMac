@@ -54,6 +54,9 @@ public class AbstractComponent {
 		wait.until(ExpectedConditions.elementToBeClickable(ele));
 
 	}
+	
+	
+	
 
 //	public CartPage goToCartPage() {
 //		
