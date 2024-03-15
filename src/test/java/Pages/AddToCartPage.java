@@ -16,7 +16,7 @@ public class AddToCartPage extends BaseComponentsDemo{
 	}
 	public boolean verifyCartDetails() throws InterruptedException {
 		driver.findElement(By.xpath("//a[text()='Cart']")).click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		WebElement firstProduct = driver.findElement(By.xpath("//td[text()='"+UserData("firstproduct")+"']"));
 		System.out.println(firstProduct.getText());
 		WebElement secondProduct = driver.findElement(By.xpath("//td[text()='"+UserData("secondproduct")+"']"));

@@ -26,7 +26,7 @@ public class ProductPage extends BaseComponentsDemo {
 		WebElement categoryEle = driver.findElement(By.xpath("//a[text()='" + UserData("firstcategory") + "']"));
 		waitFunctionVisibility(categoryEle);
 		categoryEle.click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		WebElement productEle = driver.findElement(By.xpath(productNameEle));
 		productEle.click();
 		addToCart();
@@ -38,7 +38,7 @@ public class ProductPage extends BaseComponentsDemo {
 		categoryEle = driver.findElement(By.xpath("//a[text()='" + UserData("secondcategory") + "']"));
 		waitFunctionVisibility(categoryEle);
 		categoryEle.click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		productEle = driver.findElement(By.xpath(productNameEle));
 		productEle.click();
 

@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-15T16:55:25 IST" name="Suite" finished-at="2024-03-15T16:55:48 IST" duration-ms="22197">
+  <suite started-at="2024-03-15T17:13:20 IST" name="Suite" finished-at="2024-03-15T17:13:47 IST" duration-ms="27200">
     <groups>
     </groups>
-    <test started-at="2024-03-15T16:55:25 IST" name="Test" finished-at="2024-03-15T16:55:48 IST" duration-ms="22197">
+    <test started-at="2024-03-15T17:13:20 IST" name="Test" finished-at="2024-03-15T17:13:47 IST" duration-ms="27200">
       <class name="Test.BaseTest">
-        <test-method signature="signUpTest()[pri:1, instance:Test.BaseTest@200606de]" started-at="2024-03-15T16:55:25 IST" name="signUpTest" finished-at="2024-03-15T16:55:29 IST" duration-ms="3251" status="PASS">
+        <test-method signature="signUpTest()[pri:1, instance:Test.BaseTest@200606de]" started-at="2024-03-15T17:13:20 IST" name="signUpTest" finished-at="2024-03-15T17:13:25 IST" duration-ms="4585" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signUpTest -->
-        <test-method signature="loginTest()[pri:2, instance:Test.BaseTest@200606de]" started-at="2024-03-15T16:55:29 IST" name="loginTest" finished-at="2024-03-15T16:55:33 IST" duration-ms="3872" status="PASS">
+        <test-method signature="loginTest()[pri:2, instance:Test.BaseTest@200606de]" started-at="2024-03-15T17:13:25 IST" name="loginTest" finished-at="2024-03-15T17:13:29 IST" duration-ms="3913" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method signature="selectProductAndAddToCartTest()[pri:3, instance:Test.BaseTest@200606de]" started-at="2024-03-15T16:55:33 IST" name="selectProductAndAddToCartTest" finished-at="2024-03-15T16:55:45 IST" duration-ms="12193" status="PASS">
+        <test-method signature="selectProductAndAddToCartTest()[pri:3, instance:Test.BaseTest@200606de]" started-at="2024-03-15T17:13:29 IST" name="selectProductAndAddToCartTest" finished-at="2024-03-15T17:13:43 IST" duration-ms="14843" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectProductAndAddToCartTest -->
-        <test-method signature="VerifyCartProducts()[pri:4, instance:Test.BaseTest@200606de]" started-at="2024-03-15T16:55:45 IST" name="VerifyCartProducts" finished-at="2024-03-15T16:55:48 IST" duration-ms="2845" status="PASS">
+        <test-method signature="VerifyCartProducts()[pri:4, instance:Test.BaseTest@200606de]" started-at="2024-03-15T17:13:43 IST" name="VerifyCartProducts" finished-at="2024-03-15T17:13:47 IST" duration-ms="3821" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyCartProducts -->

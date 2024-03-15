@@ -9,6 +9,7 @@
       <class name="Test.BaseTest">
         <methods>
           <include name="VerifyCartProducts"/>
+          <include name="selectProductAndAddToCartTest"/>
         </methods>
       </class> <!-- Test.BaseTest -->
     </classes>
