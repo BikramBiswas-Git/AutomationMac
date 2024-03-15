@@ -1,9 +1,5 @@
 package Pages;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.Properties;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,12 +17,9 @@ public class LoginPage extends BaseComponentsDemo {
 
 	public boolean Login() throws InterruptedException {
 		driver.get("https://www.demoblaze.com/index.html");
-		// WebElements of Login Page
 		WebElement loginButtonele = driver.findElement(By.cssSelector("#login2"));
 		WebElement usernameFieldele = driver.findElement(By.cssSelector("#loginusername"));
 		WebElement passwordFieldele = driver.findElement(By.cssSelector("#loginpassword"));
-//		WebElement nameOfUserele = driver.findElement(By.xpath("//li[@class='nav-item']/a[@id='nameofuser']"));
-//		By nameOfUserBy = By.cssSelector("#nameofuser");
 		loginButtonele.click();
 		waitFunctionVisibility(usernameFieldele);
 		usernameFieldele.sendKeys(UserData("username"));

@@ -8,7 +8,7 @@
     <classes>
       <class name="Test.BaseTest">
         <methods>
-          <include name="SignUpTest"/>
+          <include name="VerifyCartProducts"/>
         </methods>
       </class> <!-- Test.BaseTest -->
     </classes>
