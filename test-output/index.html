@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,12 +104,22 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Test.BaseTest" class="method navigator-link" hash-for-method="LoginTest">LoginTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="Test.BaseTest" class="method navigator-link" hash-for-method="VerifyCartProducts">VerifyCartProducts</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Test.BaseTest" class="method navigator-link" hash-for-method="SignUpTest">SignUpTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="Test.BaseTest" class="method navigator-link" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Test.BaseTest" class="method navigator-link" hash-for-method="selectProductAndAddToCartTest">selectProductAndAddToCartTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Test.BaseTest" class="method navigator-link" hash-for-method="signUpTest">signUpTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -132,16 +142,30 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="LoginTest">
-                  </a> <!-- LoginTest -->
-                  <span class="method-name">LoginTest</span>
+                  <a name="VerifyCartProducts">
+                  </a> <!-- VerifyCartProducts -->
+                  <span class="method-name">VerifyCartProducts</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="SignUpTest">
-                  </a> <!-- SignUpTest -->
-                  <span class="method-name">SignUpTest</span>
+                  <a name="loginTest">
+                  </a> <!-- loginTest -->
+                  <span class="method-name">loginTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectProductAndAddToCartTest">
+                  </a> <!-- selectProductAndAddToCartTest -->
+                  <span class="method-name">selectProductAndAddToCartTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="signUpTest">
+                  </a> <!-- signUpTest -->
+                  <span class="method-name">signUpTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -201,20 +225,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'LoginTest')
+data.setCell(0, 1, 'selectProductAndAddToCartTest')
 data.setCell(0, 2, 'Test.BaseTest')
-data.setCell(0, 3, 3910);
+data.setCell(0, 3, 13595);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'SignUpTest')
+data.setCell(1, 1, 'loginTest')
 data.setCell(1, 2, 'Test.BaseTest')
-data.setCell(1, 3, 3086);
+data.setCell(1, 3, 3873);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'signUpTest')
+data.setCell(2, 2, 'Test.BaseTest')
+data.setCell(2, 3, 3134);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'VerifyCartProducts')
+data.setCell(3, 2, 'Test.BaseTest')
+data.setCell(3, 3, 2792);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 23 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -242,12 +274,20 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">Test.BaseTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">SignUpTest</span>
+                <span class="method-name">signUpTest</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">LoginTest</span>
-                <span class="method-start">3092 ms</span>
+                <span class="method-name">loginTest</span>
+                <span class="method-start">3140 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectProductAndAddToCartTest</span>
+                <span class="method-start">7014 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">VerifyCartProducts</span>
+                <span class="method-start">20611 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
