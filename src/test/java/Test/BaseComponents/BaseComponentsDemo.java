@@ -22,6 +22,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
@@ -35,14 +37,39 @@ public class BaseComponentsDemo {
 	public static WebDriver driver;
 	Properties prop = new Properties();
 
-	public static WebDriver InitializeDriver() {
+	public static WebDriver InitializeChromeDriver() {
+
+		ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-notifications");
+
+		// Disable cookies
+		options.addArguments("--disable-cookies");
+		driver = new ChromeDriver(options);
+		// Create ChromeOptions instance
+
+		driver.manage().window().maximize();
+		return driver;
+
+	}
+
+	public static WebDriver InitializeSafariDriver() {
 
 //		WebDriverManager.chromedriver().setup();
 //	
 //		ChromeOptions options = new ChromeOptions();
 //		options.addArguments("--remote-allow-origins=*");
 //		driver = new ChromeDriver(options);
-		driver = new ChromeDriver();
+		driver = new SafariDriver();
+		driver.manage().window().maximize();
+		return driver;
+
+	}
+
+	public static WebDriver InitializeFirefoxDriver() {
+ 
+		FirefoxOptions options = new FirefoxOptions();
+		options.addPreference("dom.webnotifications.enabled", false);
+		driver = new FirefoxDriver(options);
 		driver.manage().window().maximize();
 		return driver;
 
@@ -66,42 +93,41 @@ public class BaseComponentsDemo {
 		FileUtils.copyFile(source, destination);
 		return "/Users/codeclouds-bikram/Documents/Ecommerce-Automation/reports/" + testCaseName + ".png";
 	}
-	
+
 	public static void waitFunctionVisibility(WebElement element) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.visibilityOf(element));
-    }
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.visibilityOf(element));
+	}
 
-    public static void waitFunctionInVisibility(WebElement element) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.invisibilityOf(element));
-    }
+	public static void waitFunctionInVisibility(WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.invisibilityOf(element));
+	}
 
-   
+	public static void waitFunctionEnabledOrDisabled(WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+	}
 
-    public static void waitFunctionEnabledOrDisabled(WebElement element) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-        wait.until(ExpectedConditions.elementToBeClickable(element));
-    }
-    public void waitFunctionAlert() {
+	public void waitFunctionAlert() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.alertIsPresent());
 
 	}
-    
-    public void waitFunctionClickable(WebElement element) {
+
+	public void waitFunctionClickable(WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 
 	}
-    public void waitFunctionPresence(By element) {
+
+	public void waitFunctionPresence(By element) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.presenceOfElementLocated(element));
 
 	}
-    
-    
-    public String UserData(String propertyName) {
+
+	public String UserData(String propertyName) {
 		Properties properties = new Properties();
 		try {
 			FileInputStream fileInputStream = new FileInputStream(

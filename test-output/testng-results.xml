@@ -1,29 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-15T17:13:20 IST" name="Suite" finished-at="2024-03-15T17:13:47 IST" duration-ms="27200">
+  <suite started-at="2024-04-12T14:57:29 IST" name="Suite" finished-at="2024-04-12T14:58:00 IST" duration-ms="31044">
     <groups>
     </groups>
-    <test started-at="2024-03-15T17:13:20 IST" name="Test" finished-at="2024-03-15T17:13:47 IST" duration-ms="27200">
+    <test started-at="2024-04-12T14:57:29 IST" name="Test1" finished-at="2024-04-12T14:58:00 IST" duration-ms="31044">
       <class name="Test.BaseTest">
-        <test-method signature="signUpTest()[pri:1, instance:Test.BaseTest@200606de]" started-at="2024-03-15T17:13:20 IST" name="signUpTest" finished-at="2024-03-15T17:13:25 IST" duration-ms="4585" status="PASS">
+        <test-method signature="signUpTest()[pri:1, instance:Test.BaseTest@bc4d5e1]" started-at="2024-04-12T14:57:29 IST" name="signUpTest" finished-at="2024-04-12T14:57:34 IST" duration-ms="5139" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signUpTest -->
-        <test-method signature="loginTest()[pri:2, instance:Test.BaseTest@200606de]" started-at="2024-03-15T17:13:25 IST" name="loginTest" finished-at="2024-03-15T17:13:29 IST" duration-ms="3913" status="PASS">
+        <test-method signature="loginTest()[pri:2, instance:Test.BaseTest@bc4d5e1]" started-at="2024-04-12T14:57:34 IST" name="loginTest" finished-at="2024-04-12T14:57:38 IST" duration-ms="3968" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method signature="selectProductAndAddToCartTest()[pri:3, instance:Test.BaseTest@200606de]" started-at="2024-03-15T17:13:29 IST" name="selectProductAndAddToCartTest" finished-at="2024-03-15T17:13:43 IST" duration-ms="14843" status="PASS">
+        <test-method signature="selectProductAndAddToCartTest()[pri:3, instance:Test.BaseTest@bc4d5e1]" started-at="2024-04-12T14:57:38 IST" name="selectProductAndAddToCartTest" finished-at="2024-04-12T14:57:54 IST" duration-ms="16334" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectProductAndAddToCartTest -->
-        <test-method signature="VerifyCartProducts()[pri:4, instance:Test.BaseTest@200606de]" started-at="2024-03-15T17:13:43 IST" name="VerifyCartProducts" finished-at="2024-03-15T17:13:47 IST" duration-ms="3821" status="PASS">
+        <test-method signature="VerifyCartProducts()[pri:4, instance:Test.BaseTest@bc4d5e1]" started-at="2024-04-12T14:57:54 IST" name="VerifyCartProducts" finished-at="2024-04-12T14:57:58 IST" duration-ms="4255" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyCartProducts -->
+        <test-method signature="PurchaseWithoutFillingTheForm()[pri:5, instance:Test.BaseTest@bc4d5e1]" started-at="2024-04-12T14:57:58 IST" name="PurchaseWithoutFillingTheForm" finished-at="2024-04-12T14:57:59 IST" duration-ms="608" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PurchaseWithoutFillingTheForm -->
+        <test-method signature="PurchaseAfterFillingTheForm()[pri:6, instance:Test.BaseTest@bc4d5e1]" started-at="2024-04-12T14:57:59 IST" name="PurchaseAfterFillingTheForm" finished-at="2024-04-12T14:58:00 IST" duration-ms="595" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PurchaseAfterFillingTheForm -->
+        <test-method signature="VerifyOrderDetails()[pri:7, instance:Test.BaseTest@bc4d5e1]" started-at="2024-04-12T14:58:00 IST" name="VerifyOrderDetails" finished-at="2024-04-12T14:58:00 IST" duration-ms="82" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyOrderDetails -->
       </class> <!-- Test.BaseTest -->
-    </test> <!-- Test -->
+    </test> <!-- Test1 -->
   </suite> <!-- Suite -->
 </testng-results>
