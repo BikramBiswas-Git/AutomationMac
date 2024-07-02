@@ -1,0 +1,6 @@
+Test/resources/ExtentReportNG.class
+Test/AbstractComponent/AbstractComponent.class
+Test/BaseComponents/SeleniumTest.class
+Test/data/ReadData.class
+Browserstack.class
+Test/data/ReadData$1.class

@@ -21,7 +21,7 @@ public class LoginPage extends BaseComponentsDemo {
 		WebElement usernameFieldele = driver.findElement(By.cssSelector("#loginusername"));
 		WebElement passwordFieldele = driver.findElement(By.cssSelector("#loginpassword"));
 		loginButtonele.click();
-		waitFunctionVisibility(usernameFieldele);
+		waitFunctionVisibility(driver, usernameFieldele);
 		usernameFieldele.sendKeys(UserData("username"));
 		passwordFieldele.sendKeys(UserData("password"));
 		driver.findElement(By.xpath("//button[text()='Log in']")).click();

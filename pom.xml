@@ -13,15 +13,19 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<logback.version>1.4.14</logback.version>
+		<jackson.version>2.16.1</jackson.version>
+		<package.directory>${project.build.directory}/docker-resources</package.directory>
 	</properties>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.4.0</version> <!-- Use the appropriate version -->
-    <scope>test</scope>
-</dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.4.0</version> <!-- Use the appropriate version -->
+			<scope>test</scope>
+		</dependency>
+		
 
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
@@ -65,9 +69,14 @@
 			<version>1.0.2</version>
 			<scope>compile</scope>
 		</dependency>
-		
-		
-		
+
+		<dependency>
+			<groupId>com.browserstack</groupId>
+			<artifactId>browserstack-java-sdk</artifactId>
+			<version>LATEST</version>
+		</dependency>
+
+
 	</dependencies>
 	<repositories>
 		<repository>
@@ -96,7 +105,7 @@
 		<sourceDirectory>
 			/Users/codeclouds-bikram/Desktop/AutomationMac/src/main/java</sourceDirectory>
 		<scriptSourceDirectory>
-		/Users/codeclouds-bikram/Desktop/AutomationMac/srcmain/scripts</scriptSourceDirectory>
+			/Users/codeclouds-bikram/Desktop/AutomationMac/srcmain/scripts</scriptSourceDirectory>
 		<testSourceDirectory>
 			/Users/codeclouds-bikram/Desktop/AutomationMac/src/test/java</testSourceDirectory>
 		<outputDirectory>
@@ -106,20 +115,19 @@
 		<resources>
 			<resource>
 				<directory>
-				/Users/codeclouds-bikram/Desktop/AutomationMac/src/test/resources</directory>
-					
+					/Users/codeclouds-bikram/Desktop/AutomationMac/src/test/resources</directory>
+
 			</resource>
 		</resources>
 		<testResources>
 			<testResource>
 				<directory>
-					
 					/Users/codeclouds-bikram/Desktop/AutomationMac/src/test/resources</directory>
 			</testResource>
 		</testResources>
 		<directory>
-			
-		/Users/codeclouds-bikram/Desktop/AutomationMac/target/</directory>
+
+			/Users/codeclouds-bikram/Desktop/AutomationMac/target/</directory>
 		<finalName>TestNGFramework-0.0.1-SNAPSHOT</finalName>
 		<pluginManagement>
 			<plugins>
@@ -312,7 +320,7 @@
 						</goals>
 						<configuration>
 							<outputDirectory>
-						/Users/codeclouds-bikram/Desktop/AutomationMac/target/site</outputDirectory>
+								/Users/codeclouds-bikram/Desktop/AutomationMac/target/site</outputDirectory>
 
 						</configuration>
 					</execution>
@@ -325,7 +333,7 @@
 						<configuration>
 							<outputDirectory>
 								/Users/codeclouds-bikram/Desktop/AutomationMac/target/site
-								</outputDirectory>
+							</outputDirectory>
 
 						</configuration>
 					</execution>
@@ -336,17 +344,38 @@
 
 				</configuration>
 			</plugin>
-<plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.1.2</version>
-        <configuration>
-          <suiteXmlFiles>
-            <suiteXmlFile>testng.xml</suiteXmlFile>
-          </suiteXmlFiles>
-        </configuration>
-      </plugin>
 			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.1.2</version>
+				<configuration>
+					<systemPropertyVariables>
+						<browser>chrome</browser>
+						<selenium.grid.enabled>true </selenium.grid.enabled>
+						
+						
+					</systemPropertyVariables>
+					
+					<suiteXmlFiles>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+			
+            <!-- To run the tests using specific parameters, change thread count, testng report output directory etc -->
+            
+            <!-- To copy all the dependencies to run our tests as part of "mvn package" -->
+           
+            <!-- To package our page objects, test classes into jar -->
+            
+            <!-- To copy resources into the output directory -->
+            
+			
+			
+			
+			
+
 		</plugins>
 	</build>
 	<reporting>

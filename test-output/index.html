@@ -7,7 +7,7 @@
 
     <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
     <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
-    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -21,8 +21,7 @@
      -->
   </head>
 
-  <body>
-    <div class="top-banner-root">
+  <body>    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
@@ -93,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">7 methods,   7 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,7 +103,22 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Test.BaseTest" class="method navigator-link" hash-for-method="PurchaseAfterFillingTheForm">PurchaseAfterFillingTheForm</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Test.BaseTest" class="method navigator-link" hash-for-method="PurchaseWithoutFillingTheForm">PurchaseWithoutFillingTheForm</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="Test.BaseTest" class="method navigator-link" hash-for-method="VerifyCartProducts">VerifyCartProducts</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Test.BaseTest" class="method navigator-link" hash-for-method="VerifyOrderDetails">VerifyOrderDetails</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -142,9 +156,30 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="PurchaseAfterFillingTheForm">
+                  </a> <!-- PurchaseAfterFillingTheForm -->
+                  <span class="method-name">PurchaseAfterFillingTheForm</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="PurchaseWithoutFillingTheForm">
+                  </a> <!-- PurchaseWithoutFillingTheForm -->
+                  <span class="method-name">PurchaseWithoutFillingTheForm</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="VerifyCartProducts">
                   </a> <!-- VerifyCartProducts -->
                   <span class="method-name">VerifyCartProducts</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="VerifyOrderDetails">
+                  </a> <!-- VerifyOrderDetails -->
+                  <span class="method-name">VerifyOrderDetails</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -179,15 +214,15 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;Test.BaseComponents.Listners&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Test1&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;Test.BaseTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
+  &lt;/test&gt; &lt;!-- Test1 --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -199,7 +234,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Test1 (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -225,28 +260,40 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(7);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'selectProductAndAddToCartTest')
 data.setCell(0, 2, 'Test.BaseTest')
-data.setCell(0, 3, 14843);
+data.setCell(0, 3, 14082);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'signUpTest')
 data.setCell(1, 2, 'Test.BaseTest')
-data.setCell(1, 3, 4585);
+data.setCell(1, 3, 6240);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'loginTest')
 data.setCell(2, 2, 'Test.BaseTest')
-data.setCell(2, 3, 3913);
+data.setCell(2, 3, 4143);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'VerifyCartProducts')
 data.setCell(3, 2, 'Test.BaseTest')
-data.setCell(3, 3, 3821);
+data.setCell(3, 3, 3819);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'PurchaseWithoutFillingTheForm')
+data.setCell(4, 2, 'Test.BaseTest')
+data.setCell(4, 3, 608);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'PurchaseAfterFillingTheForm')
+data.setCell(5, 2, 'Test.BaseTest')
+data.setCell(5, 3, 601);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'VerifyOrderDetails')
+data.setCell(6, 2, 'Test.BaseTest')
+data.setCell(6, 3, 25);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 27 seconds</span>
+              <span class="suite-total-time">Total running time: 29 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -279,16 +326,32 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">loginTest</span>
-                <span class="method-start">4595 ms</span>
+                <span class="method-start">6248 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">selectProductAndAddToCartTest</span>
-                <span class="method-start">8510 ms</span>
+                <span class="method-start">10395 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">VerifyCartProducts</span>
-                <span class="method-start">23354 ms</span>
+                <span class="method-start">24480 ms</span>
               </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">PurchaseWithoutFillingTheForm</span>
+                <span class="method-start">28301 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">PurchaseAfterFillingTheForm</span>
+                <span class="method-start">28913 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">VerifyOrderDetails</span>
+                <span class="method-start">29516 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">quitDriver</span>
+                <span class="method-start">29543 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
