@@ -5,6 +5,7 @@ import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -25,6 +26,7 @@ public class BaseTest extends BaseComponentsDemo
 	}
 
 	WebDriver driver = InitializeChromeDriver();
+//	WebDriver driver = initializeDriver();
 	// Extent Report
 	private ExtentReports extent;
 	private ExtentTest test;
@@ -84,7 +86,12 @@ public class BaseTest extends BaseComponentsDemo
 	public void VerifyOrderDetails() throws InterruptedException {
 		boolean result =cartObj.VerifyOrderDetails();
 		assertEquals(result, true);
-
+		
+	}
+	
+	@AfterTest
+	public void quitDriver() {
+		driver.quit();
 	}
 
 }

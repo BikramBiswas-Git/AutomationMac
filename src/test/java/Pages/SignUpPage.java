@@ -20,18 +20,19 @@ public class SignUpPage extends BaseComponentsDemo {
 		PageFactory.initElements(driver, this);
 	}
 
-	public String SigningUp() {
+	public String SigningUp() throws InterruptedException {
 		driver.get("https://www.demoblaze.com/index.html");
 		// WebElemets related to this page
 		WebElement signUpButton = driver.findElement(By.cssSelector("#signin2"));
 		WebElement userNameField = driver.findElement(By.cssSelector("#sign-username"));
 		WebElement passwordField = driver.findElement(By.cssSelector("#sign-password"));
 		WebElement signUpButon = driver.findElement(By.xpath("//button[text()='Sign up']"));
-		waitFunctionVisibility(signUpButton);
+//		waitFunctionVisibility(signUpButton);
+		Thread.sleep(3000);
 		signUpButton.click();
 		String userName = UserData("username");
 		String password = UserData("password");
-		waitFunctionVisibility(userNameField);
+		waitFunctionVisibility(driver, userNameField);
 		userNameField.sendKeys(userName);
 		passwordField.sendKeys(password);
 		signUpButon.click();

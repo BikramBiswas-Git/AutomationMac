@@ -62,7 +62,7 @@ public class CartPage extends BaseComponentsDemo {
 
 	public String fillFormWithoutGivingData() {
 
-		waitFunctionVisibility(driver.findElement(By.xpath("//input[@id='name']")));
+		waitFunctionVisibility(driver, driver.findElement(By.xpath("//input[@id='name']")));
 		driver.findElement(By.xpath("//button[contains(text(),'Purchase')]")).click();
 		Alert alert = driver.switchTo().alert();
 		String alertText = alert.getText();
@@ -80,7 +80,7 @@ public class CartPage extends BaseComponentsDemo {
 		driver.findElement(By.xpath("//input[@id='month']")).sendKeys(UserData("month"));
 		driver.findElement(By.xpath("//input[@id='year']")).sendKeys(UserData("year"));
 		driver.findElement(By.xpath("//button[contains(text(),'Purchase')]")).click();
-		waitFunctionVisibility(driver.findElement(By.xpath("//h2[contains(text(),'Thank you')]")));
+		waitFunctionVisibility(driver, driver.findElement(By.xpath("//h2[contains(text(),'Thank you')]")));
 		String thankYouMessage = driver.findElement(By.xpath("//h2[contains(text(),'Thank you')]")).getText();
 		return thankYouMessage;
 

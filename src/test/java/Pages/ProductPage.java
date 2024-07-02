@@ -24,7 +24,7 @@ public class ProductPage extends BaseComponentsDemo {
 		String productNameEle = "//a[text()='" + UserData("firstproduct") + "']";
 		System.out.println(productNameEle);
 		WebElement categoryEle = driver.findElement(By.xpath("//a[text()='" + UserData("firstcategory") + "']"));
-		waitFunctionVisibility(categoryEle);
+		waitFunctionVisibility(driver, categoryEle);
 		categoryEle.click();
 		Thread.sleep(3000);
 		WebElement productEle = driver.findElement(By.xpath(productNameEle));
@@ -36,7 +36,7 @@ public class ProductPage extends BaseComponentsDemo {
 		productNameEle = "//a[text()='" + UserData("secondproduct") + "']";
 		System.out.println(productNameEle);
 		categoryEle = driver.findElement(By.xpath("//a[text()='" + UserData("secondcategory") + "']"));
-		waitFunctionVisibility(categoryEle);
+		waitFunctionVisibility(driver, categoryEle);
 		categoryEle.click();
 		Thread.sleep(3000);
 		productEle = driver.findElement(By.xpath(productNameEle));
@@ -47,7 +47,7 @@ public class ProductPage extends BaseComponentsDemo {
 	public String addToCart() throws InterruptedException {
 		Thread.sleep(2000);
 		WebElement cartButton = driver.findElement(By.xpath("//a[text()='Add to cart']"));
-		waitFunctionVisibility(cartButton);
+		waitFunctionVisibility(driver, cartButton);
 		cartButton.click();
 		waitFunctionAlert();
 		Alert alert = driver.switchTo().alert();

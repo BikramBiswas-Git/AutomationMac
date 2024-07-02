@@ -4,13 +4,13 @@
   <listeners>
     <listener class-name="Test.BaseComponents.Listners"/>
   </listeners>
-  <test thread-count="2" parallel="tests" name="Test1(failed)">
+  <test thread-count="2" parallel="tests" name="Test2(failed)">
     <classes>
-      <class name="Test.BaseTest">
+      <class name="OfferByAffiliatesFlowFireFoxBrowser">
         <methods>
-          <include name="VerifyOrderDetails"/>
+          <include name="TrackingFirefox"/>
         </methods>
-      </class> <!-- Test.BaseTest -->
+      </class> <!-- OfferByAffiliatesFlowFireFoxBrowser -->
     </classes>
-  </test> <!-- Test1(failed) -->
+  </test> <!-- Test2(failed) -->
 </suite> <!-- Failed suite [Suite] -->
