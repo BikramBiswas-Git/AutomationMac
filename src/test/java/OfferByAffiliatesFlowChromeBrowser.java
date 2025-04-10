@@ -21,18 +21,19 @@ public class OfferByAffiliatesFlowChromeBrowser extends BaseComponentsDemo {
     @Test
     public void TrackingFirefox() throws InterruptedException {
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 1; i < 10; i++) {
             System.out.println(i);
-            firefoxDriver.get("https://stagesecure.panoramatrack.com/tracking/43/123/");
+//            firefoxDriver.get("https://stagesecure.panoramatrack.com/tracking/43/123/");
 
             try {
-                firefoxDriver.findElement(By.xpath("//button[text()='Add to Cart']")).click();
-                Alert alert = firefoxDriver.switchTo().alert();
-                alert.accept();
-                Thread.sleep(2000);
-                firefoxDriver.findElement(By.xpath("//a[@class='button']")).click();
-                Thread.sleep(2000);
-                firefoxDriver.get("https://stagesecure.panoramatrack.com/tracking/43/2/");
+//            	firefoxDriver.get("https://stagesecure.panoramatrack.com/tracking/"+i+"/123/");
+//                firefoxDriver.findElement(By.xpath("//button[text()='Add to Cart']")).click();
+//                Alert alert = firefoxDriver.switchTo().alert();
+//                alert.accept();
+//                Thread.sleep(2000);
+//                firefoxDriver.findElement(By.xpath("//a[@class='button']")).click();
+//                Thread.sleep(2000);
+                firefoxDriver.get("https://stagesecure.panoramatrack.com/tracking/5/"+i+"/");
                 if (firefoxDriver.findElement(By.xpath("//h1[text()='Oops! Looks like something is wrong']")).isDisplayed()) {
                     System.out.println("Error");
                 } else {
