@@ -1,1 +1,10 @@
 /target/
+Browserstack.java
+ByAffiliateTest.java
+DeviceScrub.java
+FullScrub.java
+OfferByAffiliatesFlowChromeBrowser.java
+OfferByAffiliatesFlowFireFoxBrowser.java
+OfferDeafultFlow.java
+PageLoadTime.java
+SystematicScrubAutomationTestScriptDefault.java
