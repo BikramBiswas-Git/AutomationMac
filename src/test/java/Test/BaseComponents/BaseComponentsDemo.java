@@ -40,6 +40,7 @@ public class BaseComponentsDemo {
 
 		// Disable cookies
 		options.addArguments("--disable-cookies");
+//	    options.addArguments("headless");
 		driver = new ChromeDriver(options);
 		// Create ChromeOptions instance
 
